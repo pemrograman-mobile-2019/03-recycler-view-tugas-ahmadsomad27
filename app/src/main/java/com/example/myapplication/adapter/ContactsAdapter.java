@@ -1,4 +1,4 @@
-package com.example.myapplication.models;
+package com.example.myapplication.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.models.Contact;
 
 import java.util.List;
 
