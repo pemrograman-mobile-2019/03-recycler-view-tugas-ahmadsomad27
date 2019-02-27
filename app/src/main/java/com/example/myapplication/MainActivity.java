@@ -1,27 +1,22 @@
 package com.example.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-
-import com.example.myapplication.models.Contact;
-import com.example.myapplication.adapter.ContactsAdapter;
-
-import java.util.ArrayList;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<Contact> contacts;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+   int[] IMAGES = {R.drawable.DSC_3507, R.drawable.dsc_0023, R.drawable.Adin, R.drawable.Erly,
+   R.drawable.ic_launcher_background};
+   String[] NAMES = {"BIG B", "Gandhi", "Steve Jobs","APJ Abdul",
+   "Rohmat"};
+   String[] DESCRIPTIONS = {"Actor", "Freedom", "Sports", "Scientifyc", "Penjahit"};
 
-        RecyclerView rv = findViewById(R.id.rvContacts);
-        contacts = Contact.createContactsList(13);
-        ContactsAdapter contactsAdapter = new ContactsAdapter(contacts);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        rv.setAdapter(contactsAdapter);
-        rv.setLayoutManager(layoutManager);
-    }
+   @Override
+    protected void onCreate(Bundle savedInstanceState){
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       ListView ListView=(ListView) findViewById(R.id.ListView);
+   }
 }
